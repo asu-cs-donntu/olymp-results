@@ -1,5 +1,11 @@
+* {
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
+
 .content {
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-content: center;
     .container {
@@ -37,6 +43,7 @@
     color: #0b3056;
     box-sizing: border-box;
     background: white;
+    width: 100vw;
 }
 
 @keyframes logo-spin {
