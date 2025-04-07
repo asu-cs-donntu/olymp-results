@@ -12,37 +12,42 @@ function App() {
                     <section>
                         <div className="heading">
                             <h2>Результаты</h2>
-                            <h3>Отборочного тура олимпиады для школьников 9 - 11 классов учебных заведений Донецкой
-                                Народной
-                                Республики по информатике и компьютерным технологиям</h3>
+                            <h3>Олимпиады для школьников 9 - 11 классов учебных заведений Донецкой
+                                Народной Республики по информатике и компьютерным технологиям</h3>
                         </div>
-                        <div className="table-container">
-                            <table className="table table-striped">
+                        <div className="table-responsive">
+                            <table className="table table-striped table-bordered">
                                 <thead>
                                 <tr>
-                                    <th scope="col">Занятое место</th>
-                                    <th scope="col">Фамилия, имя</th>
-                                    <th scope="col">Учебное заведение</th>
-                                    <th scope="col">Набрано баллов</th>
-                                    <th scope="col">Допуск*</th>
+                                    <th rowSpan={2}>№ п/п</th>
+                                    <th rowSpan={2}>ID</th>
+                                    <th colSpan={4}>Баллы</th>
+                                    <th rowSpan={2}>Время</th>
+                                </tr>
+                                <tr>
+                                    <th>Всего</th>
+                                    <th>1 ур.</th>
+                                    <th>2 ур.</th>
+                                    <th>3 ур.</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {ResultsData.map((result, index) => (
                                     <tr key={index}>
                                         <td>{result.place}</td>
-                                        <td>{result.name}</td>
-                                        <td>{result.school}</td>
-                                        <td>{result.score}</td>
-                                        <td>{result.allowance}</td>
+                                        <td>{result.id}</td>
+                                        <td className="text-center">{result.scores.total}</td>
+                                        <td className="text-center">{result.scores.level1}</td>
+                                        <td className="text-center">{result.scores.level2}</td>
+                                        <td className="text-center">{result.scores.level3}</td>
+                                        <td className="text-center">{result.time}</td>
                                     </tr>
                                 ))}
                                 </tbody>
                             </table>
                         </div>
-                        <p>* — На заключительный тур проходят участники, показавшие наилучшие результаты в первом этапе
-                            (не более 40 человек). Отметка "+" - участник допущен к заключительному туру, отметка "—" -
-                            не допущен.</p>
+                        <p>Во второй тур проходят участники, набравшие не менее 60 баллов.
+                            Он стоится 26 апреля 2025 г. в аудитории 8.712 с 10:00 до 12:00.</p>
                     </section>
                 </div>
             </div>
