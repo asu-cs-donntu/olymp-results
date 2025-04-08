@@ -9,7 +9,7 @@ declare module '../data/Results' {
             level3: string
         }
         time: string
-        allowance: string
     }>
     export default ResultsData
 }
+
