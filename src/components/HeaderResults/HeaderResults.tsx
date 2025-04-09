@@ -16,13 +16,12 @@ const HeaderResults: React.FC = () => {
 
     const handleResultsClick = (e: React.MouseEvent) => {
         e.preventDefault();
-        setAlertText("В данный момент просмотр результатов недоступен.");
-        setShowAlert(true);
     };
 
     const handleRegistrationClick = (e: React.MouseEvent) => {
         e.preventDefault();
-        window.open('https://forms.yandex.ru/u/67c551ac068ff08c98a73abf/', '_blank');
+        setAlertText("Регистрация завершена.");
+        setShowAlert(true);
     };
 
     return (
